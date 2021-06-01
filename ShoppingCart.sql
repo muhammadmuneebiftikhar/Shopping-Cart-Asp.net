@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [ShoppingCart]    Script Date: 6/2/2021 1:57:45 AM ******/
+/****** Object:  Database [ShoppingCart]    Script Date: 6/2/2021 2:05:10 AM ******/
 CREATE DATABASE [ShoppingCart]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -80,7 +80,7 @@ ALTER DATABASE [ShoppingCart] SET QUERY_STORE = OFF
 GO
 USE [ShoppingCart]
 GO
-/****** Object:  Table [dbo].[Products]    Script Date: 6/2/2021 1:57:45 AM ******/
+/****** Object:  Table [dbo].[Products]    Script Date: 6/2/2021 2:05:10 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -96,6 +96,20 @@ CREATE TABLE [dbo].[Products](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Products] ON 
+GO
+INSERT [dbo].[Products] ([Name], [Image], [Price], [Description], [Id]) VALUES (N'Apple', N'apple.png', 15, N'Lorem', 1)
+GO
+INSERT [dbo].[Products] ([Name], [Image], [Price], [Description], [Id]) VALUES (N'Grapes', N'grape.png', 25, N'lorem', 2)
+GO
+INSERT [dbo].[Products] ([Name], [Image], [Price], [Description], [Id]) VALUES (N'Oranges', N'orange.png', 35, N'lorem', 3)
+GO
+INSERT [dbo].[Products] ([Name], [Image], [Price], [Description], [Id]) VALUES (N'Pears', N'pear.png', 55, N'lorem', 4)
+GO
+INSERT [dbo].[Products] ([Name], [Image], [Price], [Description], [Id]) VALUES (N'Water Melon', N'watermelon.png', 75, N'lorem', 5)
+GO
+SET IDENTITY_INSERT [dbo].[Products] OFF
 GO
 USE [master]
 GO
