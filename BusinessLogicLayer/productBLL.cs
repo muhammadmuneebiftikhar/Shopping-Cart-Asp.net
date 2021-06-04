@@ -21,5 +21,9 @@ namespace BusinessLogicLayer
         {
             return pDAL.SearchProductsDAL(p);
         }
+        public bool InsertProductBLL(product p)
+        {
+            return pDAL.insertProduct(p);
+        }
     }
 }

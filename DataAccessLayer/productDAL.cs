@@ -21,5 +21,11 @@ namespace DataAccessLayer
             string qry = $"Select * from products where Id ={p.Id}";
             return db.Search(qry);
         }
+        
+        public bool insertProduct(product p)
+        {
+            string qry = "Insert into products Values ('"+ p.Name +"', '"+ p.Image +"', '"+ p.Price +"', '"+ p.Description +"' )";
+            return db.UDI(qry);
+        }
     }
 }
